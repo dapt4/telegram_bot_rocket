@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>rocket_with</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Inclusive Sans", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-800 text-white">
+    <h1 class="text-8xl text-blue-600 text-center" id="backend_with">
+      backend_with
+    </h1>
+    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="requirements">requirements</h2>
+    <ul class="list-disc ml-20">
+      <li class="ml-10">python3.10</li>
+      <li class="ml-10">pyenv if you dont have 3.10 version</li>
+      <li class="ml-10">poerty or pip</li>
+      <li class="ml-10">ngrok</li>
+    </ul>
+    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="setup">setup</h2>
+    <ul class="list-none ml-20">
+      <li class="ml-10">
+        the dependencies are handled with poerty by default, but you can use pip
+        if you prefer
+      </li>
+      <li class="ml-10"><code>$ poerty install</code></li>
+      <li class="ml-10">or</li>
+      <li class="ml-10"><code>$ pip install -r requirements.txt</code></li>
+      <li class="ml-10">create a virtual env and active activet it</li>
+      <li class="ml-10"><code>$ poetry shell</code></li>
+      <li class="ml-10">or</li>
+      <li class="ml-10">
+        <code>$ python -m venv venv</code>
+        <code>$ source venv/bin/activate</code>
+      </li>
+      <li class="ml-10">create a file .env and add your credentials</li>
+      <li class="ml-10">
+        <blockquote>
+          <p>
+            ENV_SECRET_KEY=&quot;{add a secret key like
+            bhajfbkjhawbdkjhabdjh}&quot;\ bot_token = &#39;{your token
+            (botFather bot provide it to you)}&#39;\ URL = &#39;{the public url
+            (ngrok provide it to you)}&#39;
+          </p>
+        </blockquote>
+      </li>
+      <li class="ml-10">migrate the app</li>
+      <li class="ml-10"><code>$ python manage.py migrate</code></li>
+      <li class="ml-10">run the command:</li>
+      <li class="ml-10"><code>$ python manage.py migrate</code></li>
+    </ul>
+    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="run-the-app">run the app</h2>
+    <ul class="ml-20">
+      <li class="ml-10"><code>$ ngrok http 8000</code></li>
+      <li class="ml-10">get the public url from ngrolk cli in the line:</li>
+      <li class="ml-10">
+        <code
+          >Forwarding https://cecf-2-155-157-182.ngrok-free.app -&gt;
+          http://localhost:8000</code
+        >
+      </li>
+      <li class="ml-10">
+        paste it in the URL variable of the .env file, like this:
+      </li>
+      <li class="ml-10">
+        <code>URL = &#39;cecf-2-155-157-182.ngrok-free.app&#39;</code>
+      </li>
+      <li class="ml-10">run the server</li>
+      <li class="ml-10"><code>$ python manage.py runserver</code></li>
+    </ul>
+    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="try-the-app">try the app</h2>
+    <ul class="ml-20">
+      <li class="ml-10">open telegram, go to the finder and search:</li>
+      <li class="ml-10"><code>rocketDiegoPerozobot</code></li>
+      <li class="ml-10">select and click in &quot;start&quot; button</li>
+    </ul>
+    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="commands">commands</h2>
+    <ul class="ml-20">
+      <li class="ml-10"><code>/help</code> - for instructions</li>
+      <li class="ml-10"><code>/start</code> - for init the app</li>
+      <li class="ml-10">then follow the instructions</li>
+    </ul>
+  </body>
+</html>

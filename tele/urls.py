@@ -4,5 +4,5 @@ import os
 
 
 urlpatterns = [
-    path('api', views.index),
+    path('', views.index),
 ]

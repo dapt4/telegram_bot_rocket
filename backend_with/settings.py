@@ -87,8 +87,12 @@ WSGI_APPLICATION = 'backend_with.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('ENV_NAME'),
+        'HOST': os.environ.get('ENV_HOST'),
+        'PORT': os.environ.get('ENV_PORT'),
+        'USER': os.environ.get('ENV_USER'),
+        'PASSWORD': os.environ.get('ENV_PASSWORD')
     }
 }
 
@@ -134,10 +138,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated', )
-}
