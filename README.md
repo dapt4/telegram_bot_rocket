@@ -16,7 +16,7 @@
 
 - or
 
-`$ python -m venv venv`
+`$ python -m venv venv`\
 `$ source venv/bin/activate`
 
 - the dependencies are handled with poerty by default, but you can use pip if you prefer
