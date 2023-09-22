@@ -10,14 +10,6 @@
 
 ## setup
 
-- the dependencies are handled with poerty by default, but you can use pip if you prefer
-
-`$ poerty install`
-
-- or 
-
-`$ pip install -r requirements.txt`
-
 - create a virtual env and active activet it
 
 `$ poetry shell`
@@ -26,6 +18,15 @@
 
 `$ python -m venv venv`
 `$ source venv/bin/activate`
+
+- the dependencies are handled with poerty by default, but you can use pip if you prefer
+
+`$ poerty install`
+
+- or 
+
+`$ pip install -r requirements.txt`
+
 
 - create a file .env and add your credentials 
 
