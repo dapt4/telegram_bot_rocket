@@ -32,11 +32,12 @@
 
 >ENV_SECRET_KEY="{add a secret key like bhajfbkjhawbdkjhabdjh}"\
 bot_token = '{your token (botFather bot provide it to you)}'\
-ENV_NAME = "rocket"\
-ENV_HOST = "localhost"\ 
-ENV_PORT = "5432"\
-ENV_USER = "postgres"\
-ENV_PASSWORD = "19570744"
+URL = "{add URL or IP of the hosting}"
+ENV_NAME = "{database name}"\
+ENV_HOST = "{localhost or  DB path }"\ 
+ENV_PORT = "{5432 or your custom Port }"\
+ENV_USER = "{db user}"\
+ENV_PASSWORD = "{db password}"\
 
 - make the migrations 
 
