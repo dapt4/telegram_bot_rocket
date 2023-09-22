@@ -31,11 +31,15 @@
 
 >ENV_SECRET_KEY="{add a secret key like bhajfbkjhawbdkjhabdjh}"\
 bot_token = '{your token (botFather bot provide it to you)}'\
-URL = '{the public url (ngrok provide it to you)}'
+ENV_NAME = "rocket"\
+ENV_HOST = "localhost"\ 
+ENV_PORT = "5432"\
+ENV_USER = "postgres"\
+ENV_PASSWORD = "19570744"
 
-- migrate the app
+- make the migrations 
 
-`$ python manage.py migrate`
+`$ python manage.py makemigrations`
 
 - run the command:
 
@@ -43,15 +47,13 @@ URL = '{the public url (ngrok provide it to you)}'
 
 ## run the app
 
+- uncomment this line (21) in views.py
+
+`$ #polling_thread.start()`
+
+- run the following command with the same port of django (8000)
+
 `$ ngrok http 8000`
-
-- get the public url from ngrolk cli in the line:
-
-`Forwarding                    https://cecf-2-155-157-182.ngrok-free.app -> http://localhost:8000`
-
-- paste it in the URL variable of the .env file, like this:
-
-`URL = 'cecf-2-155-157-182.ngrok-free.app'`
 
 - run the server
 
@@ -61,7 +63,11 @@ URL = '{the public url (ngrok provide it to you)}'
 
 - open telegram, go to the finder and search:
 
-`rocketDiegoPerozobot`
+`rocket_by_diego_perozo`
+
+- or use the following link
+
+`https://t.me/rocketDiegoPerozobot`
 
 - select and click in "start" button
 
@@ -72,3 +78,5 @@ URL = '{the public url (ngrok provide it to you)}'
 `/start` - for init the app
 
 - then follow the instructions
+
+

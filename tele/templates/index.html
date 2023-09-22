@@ -20,7 +20,9 @@
     <h1 class="text-8xl text-blue-600 text-center" id="backend_with">
       backend_with
     </h1>
-    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="requirements">requirements</h2>
+    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="requirements">
+      requirements
+    </h2>
     <ul class="list-disc ml-20">
       <li class="ml-10">python3.10</li>
       <li class="ml-10">pyenv if you dont have 3.10 version</li>
@@ -47,42 +49,47 @@
       <li class="ml-10">
         <blockquote>
           <p>
-            ENV_SECRET_KEY=&quot;{add a secret key like
-            bhajfbkjhawbdkjhabdjh}&quot;\ bot_token = &#39;{your token
-            (botFather bot provide it to you)}&#39;\ URL = &#39;{the public url
-            (ngrok provide it to you)}&#39;
+            ENV_SECRET_KEY="{add a secret key like
+            bhajfbkjhawbdkjhabdjh}" <br>
+            bot_token = "{your token (botFather bot provide it to you)}"<br>  
+            ENV_NAME = "{your db name}"<br> 
+            ENV_HOST = "{localhost or the path to your db}"<br> 
+            ENV_PORT = "{your db port or 5432}"<br> 
+            ENV_USER = "{your db user name}"<br> 
+            ENV_PASSWORD = "<your password>"
           </p>
         </blockquote>
       </li>
+      <li class="ml-10">make the migrations</li>
+      <li class="ml-10"><code>$ python manage.py makemigrations</code></li>
       <li class="ml-10">migrate the app</li>
       <li class="ml-10"><code>$ python manage.py migrate</code></li>
-      <li class="ml-10">run the command:</li>
-      <li class="ml-10"><code>$ python manage.py migrate</code></li>
     </ul>
-    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="run-the-app">run the app</h2>
+    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="run-the-app">
+      run the app
+    </h2>
     <ul class="ml-20">
+      <li class="ml-10">uncomment this line (21) in views.py</li>
+      <li class="ml-10"><code>$ #polling_thread.start()</code></li>
+      <li class="ml-10">run the following command with the same port of django (8000)</li>
       <li class="ml-10"><code>$ ngrok http 8000</code></li>
       <li class="ml-10">get the public url from ngrolk cli in the line:</li>
-      <li class="ml-10">
-        <code
-          >Forwarding https://cecf-2-155-157-182.ngrok-free.app -&gt;
-          http://localhost:8000</code
-        >
-      </li>
-      <li class="ml-10">
-        paste it in the URL variable of the .env file, like this:
-      </li>
-      <li class="ml-10">
-        <code>URL = &#39;cecf-2-155-157-182.ngrok-free.app&#39;</code>
-      </li>
       <li class="ml-10">run the server</li>
       <li class="ml-10"><code>$ python manage.py runserver</code></li>
     </ul>
-    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="try-the-app">try the app</h2>
+    <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="try-the-app">
+      try the app
+    </h2>
     <ul class="ml-20">
       <li class="ml-10">open telegram, go to the finder and search:</li>
-      <li class="ml-10"><code>rocketDiegoPerozobot</code></li>
-      <li class="ml-10">select and click in &quot;start&quot; button</li>
+      <li class="ml-10"><code>rocket_by_diego_perozo</code></li>
+      <li class="ml-10">open telegram, go to the finder and search:</li>
+      <li class="ml-10">
+        <a href="https://t.me/rocketDiegoPerozobot">
+          https://t.me/rocketDiegoPerozobot
+        </a>
+      </li>
+      <li class="ml-10">select and click in "start" button</li>
     </ul>
     <h2 class="text-6xl ml-20 mb-5 text-emerald-400" id="commands">commands</h2>
     <ul class="ml-20">
