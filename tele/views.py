@@ -16,7 +16,7 @@ bot = telebot.TeleBot(TOKEN)
 
 
 polling_thread = threading.Thread(target=polling_threadF, args=(bot,))
-polling_thread.start() # uncomment for production
+#polling_thread.start() # uncomment for production
 
 
 # Create your views here.
