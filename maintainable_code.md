@@ -14,3 +14,6 @@ so that the code remains consistent.
 - Modulate the application: The application is separated into modules, 
 in which each one performs a specific action, so that if a change needs to 
 be made, it will not affect the other modules.
+
+- Design patterns: Design patterns such as "singleton" and "decorator" are used 
+to solve problems.

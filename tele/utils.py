@@ -3,12 +3,23 @@ from io import BytesIO
 import requests
 
 
+def singleton(func):
+    instances = {}
+    def empty_func():
+        pass
+    def get_instance(*args, **kwargs):
+        if func not in instances:
+            instances[func] = func(*args, **kwargs)
+            return instances[func]
+        else:
+            return empty_func()
+    return get_instance
 
+@singleton
 def polling_threadF(bot_instance):
     '''
-    to start the connection with the bot
+    to start the connection with the bot once
     '''
-    bot_instance.remove_webhook()
     bot_instance.polling()
 
 

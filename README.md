@@ -49,10 +49,6 @@ ENV_PASSWORD = "{db password}"\
 
 ## run the app
 
-- uncomment this line (21) in views.py
-
-`$ #polling_thread.start()`
-
 - run the following command with the same port of django (8000)
 
 `$ ngrok http 8000`
