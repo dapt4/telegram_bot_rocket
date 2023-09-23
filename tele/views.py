@@ -43,12 +43,9 @@ def start(message):
     '''
     this is the start function of the bot
     '''
-    try:
-        chat = Chat.objects.get(user_id=message.chat.id)
-        if chat is not None:
-            chat.delete()
-    except Exception as e:
-        traceback.print_exc()
+    if chat := Chat.objects.get(user_id=message.chat.id):
+        # chat = Chat.objects.get(user_id=message.chat.id)
+        chat.delete()
     try:
         frame, done = bisection(0, 61695)
         index = 1
