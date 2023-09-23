@@ -59,7 +59,6 @@ def start(message):
             bot.send_message(message.chat.id, f'Could not download the image from the url: {url}')
     except Exception as e:
         traceback.print_exc()
-        bot.send_message(message.chat.id, f'An error occurred: {str(e)}')
 
 
 @bot.message_handler(func = lambda message:True)
@@ -95,7 +94,6 @@ def receive_response(message):
             bot.send_message(message.chat.id, f'Could not download the image from the url: {url}')
     except Exception as exc:
         traceback.print_exc()
-        bot.send_message(message.chat.id, f'An error occurred: {str(exc)}')
 
 
 
