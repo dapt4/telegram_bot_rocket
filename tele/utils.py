@@ -20,7 +20,7 @@ def polling_threadF(bot_instance):
     '''
     to start the connection with the bot once
     '''
-    bot_instance.polling(none_stop=True)
+    bot_instance.infinity_polling(none_stop=True)
 
 
 def bisection(a, b):
