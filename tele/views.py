@@ -43,9 +43,11 @@ def start(message):
     '''
     this is the start function of the bot
     '''
-    if chat := Chat.objects.get(user_id=message.chat.id):
-        # chat = Chat.objects.get(user_id=message.chat.id)
+    try:
+        chat = Chat.objects.get(user_id=message.chat.id)
         chat.delete()
+    except Exception:
+        chat = None
     try:
         frame, done = bisection(0, 61695)
         index = 1
@@ -53,8 +55,8 @@ def start(message):
             chat = Chat(user_id=message.chat.id, bottom=0, middle=frame, top=61695, index=index, date=message.date )
             chat.save()
         else:
-            bot.send_message(message.chat.id, f'Could not download the image from the url: {url}')
-    except Exception as e:
+            bot.send_message(message.chat.id, f'Could not download the image')
+    except Exception:
         traceback.print_exc()
 
 
@@ -88,8 +90,8 @@ def receive_response(message):
             chat.date = message.date
             chat.save()
         if not send_photo(bot, chat.user_id, frame, index):
-            bot.send_message(message.chat.id, f'Could not download the image from the url: {url}')
-    except Exception as exc:
+            bot.send_message(message.chat.id, f'Could not download the image')
+    except Exception:
         traceback.print_exc()
 
 
