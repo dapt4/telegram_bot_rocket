@@ -54,12 +54,11 @@ def send_photo(bot_instance, id, frame, index):
     '''
     To download and send the photos to the user
     '''
-    url = f'https://framex-dev.wadrid.net/api/video/Falcon%20Heavy%20Test%20Flight%20%28Hosted%20Webcast%29-wbSwFU6tY1c/frame/{frame}/'
-    response = requests.get(url)
-    if response.status_code == 200:
-        image_bytes = BytesIO(response.content)
-        bot_instance.send_photo(id, image_bytes, caption=f'{index} - {frame} - did the rocket launch yet?[y/n]')
+    try:
+        url = f'https://framex-dev.wadrid.net/api/video/Falcon%20Heavy%20Test%20Flight%20%28Hosted%20Webcast%29-wbSwFU6tY1c/frame/{frame}/'
+        bot_instance.send_photo(id, url, caption=f'{index} - {frame} - did the rocket launch yet?[y/n]')
         return True
-    else:
+    except Exception:
         return False
+
 
