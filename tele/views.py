@@ -71,7 +71,7 @@ def receive_response(message):
         index = chat.index + 1
         frame: int
         done: bool
-        if response == 'y':
+        if response == 'y' or response == 'yes':
             frame, done = bisection(chat.bottom, chat.middle)
             if done:
                 return result_message(bot, message, frame, chat.index, timestamp_date(chat.date))
